@@ -8,9 +8,11 @@ def get_book_text(path):
     with open(path) as f:
         return f.read()
 
+
 def count_words(text):
     words = text.split()
     return len(words)
+
 
 def count_char(text):
     char_count = {}
@@ -22,8 +24,10 @@ def count_char(text):
             char_count[char] += 1
     return char_count
 
+
 def sort_on(dict):
     return dict["num"]
+
 
 def report(text):
     char_counts = count_char(text)
@@ -39,5 +43,6 @@ def report(text):
         print(f"The '{char}' character was found {num} times")
 
     print(f"--- End report ---")
+
 
 main()
